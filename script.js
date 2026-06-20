@@ -2,29 +2,22 @@ let humanscore = 0;
 let computerscore = 0;
 
 function getcomputer_choice() {
-  const max = Math.floor(5);
-  const min = Math.ceil(-5);
-  const s = Math.floor(Math.random() * 3);
-  if (s === 0) {
+ 
+  const randomNumber = Math.floor(Math.random() * 3);
+  if (randomNumber === 0) {
     return "rock";
-  } else if (s === 1) {
+  } else if (randomNumber === 1) {
     return "paper";
   } else {
     return "scissor";
   }
 }
 function gethuman_choice() {
-  let c = prompt("Enter Your Choice");
-  return c.toLowerCase();
+  let choice = prompt("Enter Your Choice");
+  return choice.toLowerCase();
 }
 
-
-
-function playgame() {
-  let humanscore = 0;
-  let computerscore = 0;
-
-  function playround(humanChoice, computerChoice) {
+function playround(humanChoice, computerChoice) {
   if (humanChoice === "rock" && computerChoice === "paper") {
     computerscore += 1;
   } else if (humanChoice === "rock" && computerChoice === "scissor") {
@@ -40,6 +33,12 @@ function playgame() {
   } else {
     console.log("Same Choice PlayAgain");
   }
+
+
+function playgame() {
+  let humanscore = 0;
+  let computerscore = 0;
+ 
 
 }
   for(let i=1 ; i<=5; i++) {
