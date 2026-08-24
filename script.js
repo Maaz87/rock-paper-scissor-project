@@ -1,7 +1,14 @@
-let humanscore = 0;
-let computerscore = 0;
 
-function getcomputer_choice() {
+        let humanscore = 0;
+        let computerscore = 0;
+
+const rck=document.querySelector(".rock");
+const ppr=document.querySelector(".paper");
+const scr=document.querySelector(".scissor");
+
+
+
+    function getcomputer_choice() {
  
   const randomNumber = Math.floor(Math.random() * 3);
   if (randomNumber === 0) {
@@ -12,12 +19,22 @@ function getcomputer_choice() {
     return "scissor";
   }
 }
-function gethuman_choice() {
-  let choice = prompt("Enter Your Choice");
-  return choice.toLowerCase();
-}
 
-function playround(humanChoice, computerChoice) {
+
+const result = document.querySelector(".res");
+
+const h2 = document.createElement("h2");
+const msg = document.createElement("p");
+const hum_sc = document.createElement("p");
+const com_sc = document.createElement("p");
+h2.textContent="Score";
+hum_sc.textContent="You:"+humanscore;
+com_sc.textContent="Computer: " + computerscore;
+result.appendChild(h2);
+
+function playRound(humanChoice) {
+
+    const computerChoice= getcomputer_choice();
   if (humanChoice === "rock" && computerChoice === "paper") {
     computerscore += 1;
   } else if (humanChoice === "rock" && computerChoice === "scissor") {
@@ -31,33 +48,31 @@ function playround(humanChoice, computerChoice) {
   } else if (humanChoice === "scissor" && computerChoice === "paper") {
     humanscore += 1;
   } else {
-    console.log("Same Choice PlayAgain");
+    msg.textContent = "Same choice Play Again";
   }
 
+   hum_sc.textContent="You:"+humanscore;
+com_sc.textContent="Computer: " + computerscore;
 
-function playgame() {
-  let humanscore = 0;
-  let computerscore = 0;
- 
-
-}
-  for(let i=1 ; i<=5; i++) {
-    const humanselection = gethuman_choice();
-    const computerSelection = getcomputer_choice();
-    playround(humanselection, computerSelection);
-  }
-
-    console.log("Computer Score = " + computerscore);
-    console.log("Human Score = " + humanscore);
-
-  if(humanscore>computerscore){
-    console.log("Congrats Human Wins");
-  }
-  else {
-    console.log("Computer Wins");
-  }
-  
+    if (humanscore === 5) {
+    msg.textContent = "You win the game!";
+} else if (computerscore === 5) {
+    msg.textContent = "Computer wins the game!";
 }
 
-playgame();
+ }
 
+
+rck.addEventListener('click', () =>  playRound("rock"));
+ppr.addEventListener('click', () =>  playRound("paper"));
+scr.addEventListener('click', () =>  playRound("scissor"));
+
+
+
+
+
+
+
+result.appendChild(hum_sc);
+result.appendChild(com_sc);
+result.appendChild(msg);
