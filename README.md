@@ -42,3 +42,12 @@ How the Game works:
 
 
  completed the project 
+
+
+ #ReWriting in Progress
+    I will be rewriting the code by doing:
+    ---
+    * Changing the code (Removing some parts and adding some code)
+    * Adding UI
+    * Will be Adding Buttons For Playing
+    * Points System Will be Added
