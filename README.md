@@ -1,62 +1,23 @@
-# rock-paper-scissor-project
+# Rock Paper Scissors
 
- created html and javascript file
+A browser-based Rock Paper Scissors game built with HTML and JavaScript.
 
- currently i have only added code for user input and computer choice selection and the logic behind computer slection is math.random function
+## How to Play
 
-the math.random funtion a select value between 0 1 and 2 then that value is checked in if else condition
+1. Click the Rock, Paper, or Scissor button.
+2. The computer randomly selects its choice.
+3. The result and running score appear on the page.
+4. The game announces the winner when either player reaches 5 points.
 
-and then the choice of computer is returned that can be anything rock paper or scissor
+## Project Structure
 
-for human i created a gethuman_choice function which is called from inside the playgame function and a pop up comes in the browser
+- `index.html` contains the game buttons and results container.
+- `script.js` contains the game logic and DOM updates.
 
-which ask user to input their choice and that choice is returned to humanselection and then it is compared with computer selection 
+## What This Project Practices
 
-And the games rules are applied
-
-How the Game works:
-
-1. Play game function called
-
-2. a for loop is started Which main work is round change and function calls
-
-3. gethuman_choice function is called to get choice input from user
-
-4. getcomputer_choice is called to get computer choice through math.random function and a specific value is selected then that value is compared with in if else 
-
-    specfic choice is returned
-
-5. playround function is called
-
-6. 2 parameters are shared in function that is of human choice and computer choice
-
-7. On those choices rules of the games are applied and the one who wins his score are updated
-
-8. From step 2 to step 7 happens 4 time after which the games is ended
-
-9. after 5 rounds score of both are shown 
-
-10. A message is then printed
-
-11. End
-
-
- completed the project 
-
-
- #ReWriting in Progress
-    I will be rewriting the code by doing:
-    ---
-   * Changing the code (Removing some parts and adding some code)
-   * Adding UI
-   * Will be Adding Buttons For Playing
-   * Points System Will be Added
-
-## Language To be Used
-
- * Html
- * Css
- * JavaScript
-
-## What to Learn
-    The focus of this is to learn dom
+- JavaScript event listeners
+- DOM selection and text updates
+- Random computer choices
+- Score tracking
+- Conditional game logic
