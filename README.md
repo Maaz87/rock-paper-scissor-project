@@ -47,7 +47,16 @@ How the Game works:
  #ReWriting in Progress
     I will be rewriting the code by doing:
     ---
-    * Changing the code (Removing some parts and adding some code)
-    * Adding UI
-    * Will be Adding Buttons For Playing
-    * Points System Will be Added
+   * Changing the code (Removing some parts and adding some code)
+   * Adding UI
+   * Will be Adding Buttons For Playing
+   * Points System Will be Added
+
+## Language To be Used
+
+ * Html
+ * Css
+ * JavaScript
+
+## What to Learn
+    The focus of this is to learn dom
